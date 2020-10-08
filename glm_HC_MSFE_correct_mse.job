@@ -1,0 +1,10 @@
+#!/bin/bash
+#BSUB -J glm_HC_MSFE_correct_mse
+#BSUB -q bigmem
+#BSUB -n 1
+#BSUB -W 100:00
+#BSUB -e glm_HC_MSFE_correct_mse.err
+#BSUB -o glm_HC_MSFE_correct_mse.out
+module switch python/2.7.3 python/3.7.1 
+$HOME/software/local/R-3.6.3/bin/Rscript  glm_HC_MSFE_correct.R mse
+~          
